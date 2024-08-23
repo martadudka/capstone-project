@@ -1,38 +1,210 @@
-.App {
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #6a7b68;
+  color: #ffd700;
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-content h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.hero img {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hero button {
+  background-color: #ffd700;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.hero button:hover {
+  background-color: #ffc700;
+}
+
+/* Specials Section */
+.specials {
+  padding: 50px;
+  background-color: #fff;
+}
+
+.specials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.special-card {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.special-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.price {
+  font-weight: bold;
+  color: #ff7b00;
+}
+
+.special-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ffd700;
+  border: none;
+  cursor: pointer;
+}
+
+.special-btn:hover {
+  background-color: #ffc700;
+}
+
+/* Chicago Section */
+.chicago {
+  padding: 50px;
+  background-color: #ececec;
+  text-align: center;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero img {
+    display: none;
+  }
+
+  .specials-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 768px) {
+  .specials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  .hero img {
+    display: none;
+  }
+}
+
+nav {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  font-size: 18px;
+}
+
+/* Booking Form */
+.booking-page {
+  padding: 50px 100px;
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+form label,
+form input,
+form select,
+form button {
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form input,
+form select {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #ffd700;
+  border: none;
+  color: #333333;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #ffc700;
 }
